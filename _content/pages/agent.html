@@ -1,0 +1,61 @@
+---
+title:  Agent
+date: 2014-06-10 22:34
+---
+# The Devophp Agent Component
+
+The **Agent** is a crucial component, as it is installed on all the nodes you wish to control through Devophp.
+The **Agent** receives commands to execute on the node, for example from the [Monitor](/monitor).
+
+## Getting started
+
+### Prerequisites
+
+To run the agents on your nodes, you'll need the following packages installed:
+
+* php-cli
+* git
+* composer 
+
+### Installation
+
+Installing the agent on your nodes is easy. simply follow these instructions:
+
+    mkdir -p /usr/local/devophp/
+    cd /usr/local/devophp/
+    git clone git@github.com:devophp/agent.git
+    cd agent
+    composer install
+    
+### Configuration
+
+//TODO: Document the config file
+
+### Starting the agent
+
+Start the agent using the following command:
+
+    ./bin/console agent:daemon
+    
+
+## Communication
+
+The Agent only communicates directly with a message queue. It subscribes to a topic to watch for commands.
+Once a command is sent to the topic (by the [Monitor](/monitor)), the Agent will execute the command.
+
+The Agent can report back the output of the command back to the message queue.
+
+## Plugins
+
+The **Agent** in itself does not provide any direct functionality.
+All functionality is implemented by Agent plugins.
+
+### Available plugins
+
+#### Nagios plugin
+
+The Nagios Agent Plugin implements the `nagios:check` command.
+
+By sending this command to the agent, you can execute nagios plugins (called 'checks').
+Each Nagios check outputs a simple statuscode (OK, Warning or Critical) and optional details, which will be
+reported back to the Monitor.
