@@ -1,0 +1,8 @@
+site:
+    title: 'Devophp Website'
+    description: 'Welcome to the Devophp website'
+    author: devophp
+    pretty_urls: false
+    hide_quickstart: true
+smartypants:
+    enable: true
