@@ -1,0 +1,17 @@
+---
+layout: page
+format: none
+title: Blog
+footer: false
+---
+
+<div id="blog-archives">
+{% for year in blog.years %}
+  {% for post in year.posts %}
+  <article>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.timestamp | date('M d Y') }}</p>
+  </article>
+  {% endfor %}
+{% endfor %}
+</div>

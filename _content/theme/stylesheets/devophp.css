@@ -1,0 +1,42 @@
+
+
+header {
+    background-color: #007196;
+    color: #ffffff;
+    padding: 20px 0px 20px 0px;
+}
+header h1 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 200%;
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+}
+header h2 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 100%;
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+}
+
+
+
+footer {
+    margin-top: 40px;
+    background-color: #404040;
+    min-height: 300px;
+    color: #808080;
+    padding-top: 40px;
+}
+
+footer a {
+    color: #c0c0c0;
+}
+footer a:hover {
+    color: #c0c0c0;
+}
+h1, h2, h3, td, th, p, body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}

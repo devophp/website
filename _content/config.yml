@@ -1,8 +1,10 @@
 site:
     title: 'Devophp Website'
     description: 'Welcome to the Devophp website'
+    subtitle: 'cool stuff for devophps'
     author: devophp
     pretty_urls: false
     hide_quickstart: true
+
 smartypants:
     enable: true

@@ -1,0 +1,25 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<div>
+    <article class="hentry" role="article">
+        {% if not post %}
+            {% set post = page %}
+        {% endif %}
+        {% if not post.no_header %}
+            <h1 class="entry-title">{{ post.title }}</h1>
+            {% if post.meta != false %}
+              <p class="meta">
+                {% include post/date.html %}{{ time }}
+              </p>
+            {% endif %}
+          </header>
+        {% endif %}
+        {% if index %}
+            <div class="entry-content">{{ content|raw }}</div>
+        {% else %}
+            <div class="entry-content">{{ content|raw }}</div>
+        {% endif %}
+    </article>
+</div>
+{% endblock %}
