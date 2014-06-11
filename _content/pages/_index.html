@@ -6,13 +6,29 @@ date: 2014-06-10 17:57
 # About Devophp
 
 Devophp is a set of decoupled devops components, implemented in PHP.
-It provides a core platform for communication that can be used for a wide range of practical solutions.
+It provides a core platform for communication that can be used for a wide range of practical solutions. For example:
 
-The code-base is designed with simplicity and extensibility in mind.
+* System monitorring
+* Distributed firewall management
+* Metrics collection
+* Configuration management
+* Application deployment
+* Distributed commands
+* ... etc, it's easy to add new plugins
+
+Think of it as nice blend between nagios, puppet, collectd, statsd, capistrano, mcollective, shipyard, security groups, cloudformation and more.
+
+The system is message-based, meaning that all communication flows through a message broker. There are no complicated firewall rules to set up on your nodes, all traffic is outbound to the message broker.
+
+The code-base is designed with simplicity and extensibility in mind. It's easy to build new functionality on the existing components.
 
 Projects can be used together for a full solution, or individually, as building blocks.
 
 ## The big picture
+
+<center>
+<img src="images/devophp_overview.svg" style="width: 75%;" />
+</center>
 
 The 3 primary components of a Devophp setup are:
 
